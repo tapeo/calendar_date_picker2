@@ -311,6 +311,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     this.closeDialogOnCancelTapped,
     this.closeDialogOnOkTapped,
     this.buttonPadding,
+    this.scrollPhysics,
   }) : super(
           calendarType: calendarType,
           firstDate: firstDate,
@@ -344,6 +345,7 @@ class CalendarDatePicker2WithActionButtonsConfig
           customModePickerIcon: customModePickerIcon,
           modePickerTextHandler: modePickerTextHandler,
           rangeBidirectional: rangeBidirectional,
+          scrollPhysics: scrollPhysics,
         );
 
   /// The gap between calendar and action buttons
@@ -372,6 +374,9 @@ class CalendarDatePicker2WithActionButtonsConfig
 
   /// Custom wrapping padding for Ok & Cancel buttons
   final EdgeInsets? buttonPadding;
+
+  // Define the scroll physics for the calendar
+  final ScrollPhysics? scrollPhysics;
 
   @override
   CalendarDatePicker2WithActionButtonsConfig copyWith({
@@ -416,6 +421,7 @@ class CalendarDatePicker2WithActionButtonsConfig
     bool? closeDialogOnOkTapped,
     EdgeInsets? buttonPadding,
     bool? rangeBidirectional,
+    ScrollPhysics? scrollPhysics,
   }) {
     return CalendarDatePicker2WithActionButtonsConfig(
       calendarType: calendarType ?? this.calendarType,
@@ -472,6 +478,7 @@ class CalendarDatePicker2WithActionButtonsConfig
       closeDialogOnOkTapped:
           closeDialogOnOkTapped ?? this.closeDialogOnOkTapped,
       buttonPadding: buttonPadding ?? this.buttonPadding,
+      scrollPhysics: scrollPhysics ?? this.scrollPhysics,
     );
   }
 }
