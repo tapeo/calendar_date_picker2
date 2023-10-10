@@ -361,7 +361,7 @@ class _CalendarViewState extends State<_CalendarView> {
                           widget.config.firstDate, widget.config.lastDate) +
                       1,
                   onPageChanged: _handleMonthPageChanged,
-                  scrollPhysics: widget.config.scrollPhysics,
+                  physics: widget.config.scrollPhysics,
                 ),
               ),
             ),
